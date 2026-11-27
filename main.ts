@@ -1,15 +1,20 @@
 // Funniest Autocorrect Fail (u-zeroxfive-funniest-autocorrect-fail-ddf82154):
 // one line under 200 characters that reads as a hilarious autocorrect fail.
-// The line is a text to a friend right after a job interview: the intended
-// word "meet" slipped into "eat", so the sender casually tells the hiring
-// panel they are not afraid to eat the CEO. The slip is clear from context,
-// surprising, and the message reads like a real phone text, not a written
-// joke. Node 22+, no dependencies, no network access.
+// Round 2: a text to a friend after a first therapy session. The intended
+// word "therapist" slipped into "the rapist" — a word-boundary split, the
+// exact kind of slip real autocorrect makes (it inserts a space and picks
+// the more common words). The wrong word is far more surprising than round
+// 1's "eat the CEO" (meet -> eat): it turns a wholesome update into a
+// deadpan confession, and the flat kicker "honestly, it's really helping"
+// lands the joke a second time. The intended word is named in the first
+// clause, so the slip is instantly clear with no explanation, and the line
+// still reads like a real phone text, not a written joke. Node 22+, no
+// dependencies, no network access.
 
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const ENTRY =
-  "The interview went great — I told them I'm a team player, I work well under pressure, and I'm not afraid to eat the CEO.";
+  "Started seeing a new therapist today — I meet the rapist every Thursday and honestly, it's really helping.";
 
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 
